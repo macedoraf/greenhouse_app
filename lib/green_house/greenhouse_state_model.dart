@@ -1,6 +1,6 @@
 import 'package:firebase_database/firebase_database.dart';
 
-class EstufaModel {
+class GreenHouse {
   String key;
   bool exaustor;
   bool irrigador;
@@ -8,10 +8,10 @@ class EstufaModel {
   int temperatura;
   int umidade;
 
-  EstufaModel(
+  GreenHouse(
       this.exaustor, this.irrigador, this.luz, this.temperatura, this.umidade);
 
-  EstufaModel.fromSnapshot(DataSnapshot snapshot)
+  GreenHouse.fromSnapshot(DataSnapshot snapshot)
       : key = snapshot.key,
         exaustor = snapshot.value["exaustor"],
         irrigador = snapshot.value["irrigador"],

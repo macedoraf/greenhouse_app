@@ -1,5 +1,5 @@
-import 'package:estufinha_app/ferramentas/ferramentas_page.dart';
-import 'package:estufinha_app/infra/infra_page.dart';
+import 'package:estufinha_app/ferramentas/tools_page.dart';
+import 'package:estufinha_app/green_house/green_house_page.dart';
 import 'package:estufinha_app/plantas/plantas_page.dart';
 import 'package:flutter/material.dart';
 
@@ -21,9 +21,9 @@ class MainPageState extends State<MainPage> {
         body: PageView(
           controller: pageController,
           children: <Widget>[
-            InfraPage(),
+            GreenHousePage(),
             PlantasPage(),
-            FerramentasPage()
+            ToolsPage()
           ],
         ),
         bottomNavigationBar: AnimatedBuilder(
@@ -38,7 +38,7 @@ class MainPageState extends State<MainPage> {
                   currentIndex: pageController?.page?.round() ?? 0,
                   items: [
                     BottomNavigationBarItem(
-                        icon: Icon(Icons.toys), title: Text("Infraestrutura")),
+                        icon: Icon(Icons.toys), title: Text("Estufa")),
                     BottomNavigationBarItem(
                         icon: Icon(Icons.spa), title: Text("Plantas")),
                     BottomNavigationBarItem(
