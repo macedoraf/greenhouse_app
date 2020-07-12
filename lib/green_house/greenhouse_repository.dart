@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:firebase_database/firebase_database.dart';
 
-import 'greenhouse_state_model.dart';
+import 'greenhouse_model.dart';
 
 class GreenHouseRepository {
   final FirebaseDatabase _database = FirebaseDatabase.instance;

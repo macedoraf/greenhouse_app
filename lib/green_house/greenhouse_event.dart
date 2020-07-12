@@ -1,6 +1,6 @@
 
 
-import 'greenhouse_state_model.dart';
+import 'greenhouse_model.dart';
 
 abstract class GreenHouseEvent {
   const GreenHouseEvent();

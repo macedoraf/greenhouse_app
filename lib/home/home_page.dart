@@ -1,6 +1,7 @@
+import 'package:estufinha_app/app/myapp.dart';
 import 'package:estufinha_app/ferramentas/tools_page.dart';
 import 'package:estufinha_app/green_house/green_house_page.dart';
-import 'package:estufinha_app/plantas/plantas_page.dart';
+import 'package:estufinha_app/plant/plant_page.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {
@@ -18,33 +19,33 @@ class MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: PageView(
-          controller: pageController,
-          children: <Widget>[
-            GreenHousePage(),
-            PlantasPage(),
-            ToolsPage()
-          ],
-        ),
-        bottomNavigationBar: AnimatedBuilder(
-            animation: pageController,
-            builder: (_, __) {
-              return BottomNavigationBar(
-                  onTap: (index) {
-                    pageController.animateToPage(index,
-                        duration: Duration(milliseconds: 100),
-                        curve: Curves.easeInOut);
-                  },
-                  currentIndex: pageController?.page?.round() ?? 0,
-                  items: [
-                    BottomNavigationBarItem(
-                        icon: Icon(Icons.toys), title: Text("Estufa")),
-                    BottomNavigationBarItem(
-                        icon: Icon(Icons.spa), title: Text("Plantas")),
-                    BottomNavigationBarItem(
-                        icon: Icon(Icons.build), title: Text("Ferramentas"))
-                  ]);
-            }),
-        appBar: AppBar(title: Text(widget.title)));
+      body: _pageView(),
+      bottomNavigationBar: AnimatedBuilder(
+          animation: pageController,
+          builder: (_, __) {
+            return _bottomNavigation();
+          }),
+    );
   }
+
+  _pageView() => PageView(
+        controller: pageController,
+        children: <Widget>[GreenHousePage(), PlantPage(), ToolsPage()],
+      );
+
+  _bottomNavigation() => BottomNavigationBar(
+          backgroundColor: bottomAppColor,
+          onTap: (index) {
+            pageController.animateToPage(index,
+                duration: Duration(milliseconds: 100), curve: Curves.easeInOut);
+          },
+          currentIndex: pageController?.page?.round() ?? 0,
+          items: [
+            BottomNavigationBarItem(
+                icon: Icon(Icons.toys), title: Text("Estufa")),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.spa), title: Text("Plantas")),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.build), title: Text("Ferramentas"))
+          ]);
 }

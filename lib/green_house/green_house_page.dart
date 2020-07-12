@@ -3,9 +3,9 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'greenhouse_state_bloc.dart';
-import 'greenhouse_state_event.dart';
-import 'greenhouse_state_model.dart';
+import 'greenhouse_bloc.dart';
+import 'greenhouse_event.dart';
+import 'greenhouse_model.dart';
 
 class GreenHousePage extends StatefulWidget {
   @override
@@ -40,10 +40,10 @@ class GreenHousePageState extends State<GreenHousePage> {
                       children: <Widget>[
                         Text(
                           "Temperatura:",
-                          style: TextStyle(fontSize: 20.0),
+                          style: Theme.of(context).textTheme.bodyText1,
                         ),
                         Text(_greenHouseModel.temperatura.toString(),
-                            style: TextStyle(fontSize: 20.0)),
+                            style: Theme.of(context).textTheme.bodyText1),
                       ],
                     ),
                     Row(
@@ -51,11 +51,11 @@ class GreenHousePageState extends State<GreenHousePage> {
                       children: <Widget>[
                         Text(
                           "Umidade:",
-                          style: TextStyle(fontSize: 20.0),
+                          style: Theme.of(context).textTheme.bodyText1,
                         ),
                         Text(
                           _greenHouseModel.umidade.toString(),
-                          style: TextStyle(fontSize: 20.0),
+                          style: Theme.of(context).textTheme.bodyText1,
                         ),
                       ],
                     ),
@@ -64,9 +64,9 @@ class GreenHousePageState extends State<GreenHousePage> {
                       children: <Widget>[
                         Text(
                           "Exaustor:",
-                          style: TextStyle(fontSize: 20.0),
+                          style: Theme.of(context).textTheme.bodyText1,
                         ),
-                        CupertinoSwitch(
+                        Switch(
                           value: _greenHouseModel.exaustor,
                           onChanged: (bool) {
                             _greenHouseModel.exaustor = bool;
@@ -81,9 +81,9 @@ class GreenHousePageState extends State<GreenHousePage> {
                       children: <Widget>[
                         Text(
                           "Irrigador:",
-                          style: TextStyle(fontSize: 20.0),
+                          style: Theme.of(context).textTheme.bodyText1,
                         ),
-                        CupertinoSwitch(
+                        Switch(
                           value: _greenHouseModel.irrigador,
                           onChanged: (bool) {
                             _greenHouseModel.irrigador = bool;
@@ -100,7 +100,7 @@ class GreenHousePageState extends State<GreenHousePage> {
                           "Luz:",
                           style: TextStyle(fontSize: 20.0),
                         ),
-                        CupertinoSwitch(
+                        Switch(
                           value: _greenHouseModel.luz,
                           onChanged: (bool) {
                             _greenHouseModel.luz = bool;

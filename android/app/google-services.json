@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "606221566388",
+    "firebase_url": "https://adm-estufinha.firebaseio.com",
+    "project_id": "adm-estufinha",
+    "storage_bucket": "adm-estufinha.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606221566388:android:250bbf12e2260e63b4f2e1",
+        "android_client_info": {
+          "package_name": "com.example.estufinha_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "606221566388-lrdull69u60a5gij2g10kltitb34aonf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmdpmwsMCwh66sxCRNaufGZwK2OiGuGjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "606221566388-lrdull69u60a5gij2g10kltitb34aonf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "606221566388-djs6fmikvcqpqpo19v4278hoiretk8sq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.estufinhaApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

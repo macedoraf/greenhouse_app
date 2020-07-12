@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:estufinha_app/green_house/greenhouse_repository.dart';
 
-import 'greenhouse_state_event.dart';
-import 'greenhouse_state_model.dart';
+import 'greenhouse_event.dart';
+import 'greenhouse_model.dart';
 
 class GreenHouseBLOC {
   //Database Repository

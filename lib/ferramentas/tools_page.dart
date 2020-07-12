@@ -19,28 +19,6 @@ class ToolsPageState extends State<ToolsPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        padding: EdgeInsets.all(20),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Text("Exaustor:", style: TextStyle(fontSize: 20)),
-                Slider(
-                  min: 0,
-                  max: 100,
-                  onChanged: (value) {
-                    this.setState(() {
-                      _exaustorSlider = value;
-                    });
-                  },
-                  value: _exaustorSlider,
-                )
-              ],
-            )
-          ],
-        ));
+    return Container();
   }
 }
